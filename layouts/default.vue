@@ -26,7 +26,7 @@
     </v-navigation-drawer>
 
     <!-- this is the imported component which wraps a Vuetify component -->
-    <wrapped-app-bar app-name="Nuxt/vuetify-module">
+    <wrapped-app-bar app-name="Nuxt/vuetify-module - bug testing">
       Hello from the scope inside the imported component
     </wrapped-app-bar>
 

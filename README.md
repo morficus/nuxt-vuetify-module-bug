@@ -7,16 +7,15 @@
 ``` bash
 # install dependencies
 $ npm run install
-
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+## Steps to reproduce bug
+
+1. Start the Nuxt app
+```bash
+$ npm run dev
+```
+2. Open the app in a browser and notice the custom header that is present
+3. Open `nuxt.config.js` in your editor of choice and change `treeShake` to true (line 40)
+4. Wait for the Nuxt app to rebuild and then refresh the browser
+5. Notice how the custom header no longer appears. If you use the element inspector in Chome, you will see that the `v-app-bar` element appears verbatim and is never transpiled.
